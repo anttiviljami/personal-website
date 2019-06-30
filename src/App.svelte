@@ -9,6 +9,17 @@
   const keybase = 'anttiviljami';
   const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(' ');
 
+  const tools = [
+    'AWS',
+    'Azure',
+    'Serverless',
+    'Docker',
+    'TypeScript',
+    'React',
+    'GraphQL',
+    'OpenAPI',
+  ];
+
   let flipped = false;
   const flip = () => flipped = !flipped;
 </script>
@@ -94,15 +105,15 @@
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Senior Developer, Consultant</p>
         <p>Hi there! My name is Viljami. I'm a cloud native developer who solves business problems.</p>
-        <p>You might know me from one of my open source projects or heard me speaking about APIs and Developer Experience in your local meetup or tech conference.</p>
-        <p>Right now I work with AWS, Azure, Serverless, Docker, TypeScript, React, GraphQL and OpenAPI; but these are just tools I've picked up over the past 8 years working in consultancy and tech startups. I'm not particularly passionate about any single technology but rather I'm looking to build cool things with talented people.</p>
-        <p>How can I help you?</p>
+        <p>You might know me from one of my open source projects or perhaps heard me speaking about APIs and Developer Experience at your local meetup or tech conference.</p>
+        <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 7 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
+        <p>But enough about me. How can I help you?</p>
       </div>
       <div class="links">
-        <Button link="mailto:{email}">Email</Button>
-        <Button link="https://github.com/{github}" target="_blank">Github</Button>
-        <Button link="https://linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
-        <Button link="https://twitter.com/{twitter}" target="_blank">Twitter</Button>
+        <Button link="mailto:{email}" title={email}>Email</Button>
+        <Button link="https://github.com/{github}" title="github.com/{github}" target="_blank">Github</Button>
+        <Button link="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
+        <Button link="https://twitter.com/{twitter}" title="twitter.com/{twitter}" target="_blank">Twitter</Button>
         <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
       </div>
     </Card>

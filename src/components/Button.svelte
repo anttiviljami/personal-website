@@ -1,6 +1,7 @@
 <script>
   export let link;
   export let target = undefined;
+  export let title = undefined;
 </script>
 
 <style>
@@ -31,6 +32,6 @@
   }
 </style>
 
-<a class="button" href={link} target={target} on:click={(e) => e.stopPropagation()}>
+<a class="button" href={link} target={target} title={title} on:click={(e) => e.stopPropagation()}>
   <slot></slot>
 </a>

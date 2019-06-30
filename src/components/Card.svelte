@@ -46,7 +46,7 @@
     .card {
       flex-wrap: wrap;
       width: 28rem;
-      min-height: 22rem;
+      min-height: 18rem;
     }        
     .image, .content {
       width: 100%;
