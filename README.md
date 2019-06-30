@@ -3,5 +3,6 @@
 
 My personal home page
 
-Built using [svelte.js](https://github.com/sveltejs/component-template)
+- Built using [Svelte](https://github.com/sveltejs/component-template)
+- Hosted on AWS S3 + CloudFront, deployed with Terraform.
 

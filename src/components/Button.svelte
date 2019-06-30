@@ -16,7 +16,7 @@
     display: inline-block;
     text-align: center;
     flex-grow: 1;
-    margin: 0 .5rem;
+    margin: 0 .5rem .5rem 0;
   }
   .button:hover {
     color: #8fd3d2;

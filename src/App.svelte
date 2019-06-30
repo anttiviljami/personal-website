@@ -29,10 +29,6 @@
 		flex-grow: 1;
 		margin-bottom: 1.5rem;
 	}
-	.links {
-		display: flex;
-		margin: 0 -.5rem;
-	}
 	p.title {
 		letter-spacing: .25rem;
 		text-transform: uppercase;
@@ -42,6 +38,7 @@
 			font-size: 2rem;
 		}
 		.links {
+			display: flex;
 			flex-direction: column;
 		}
 	}
@@ -53,8 +50,8 @@
 			<h1 class="heading">Viljami Kuosmanen</h1>
 			<p class="title">Developer, Consultant</p>
 			<p>Hi there! My name is Viljami and I'm a cloud native developer who solves business problems.</p>
-			<p>Right now I work with AWS, Azure, Serverless, TypeScript, React, OpenAPI and GraphQL but these are just tools I've picked up over the past 8 years.</p>
-			<p>I'm not particularly passionate about any single technology but rather my interests lie in Open Source and Developer Experience.</p>
+			<p>Right now I work with AWS, Azure, Serverless, TypeScript, React, OpenAPI and GraphQL; but these are just tools I've picked up over the past 8 years working in consultancy and tech startups. I'm not particularly passionate about any single technology but rather I'm looking to build cool things with talented people.</p>
+			<p>You might know me from one of my open source projects or heard me speaking about APIs and Developer Experience in your local meetup or tech conference. Feel free to contact me if there's anything I can help you with!</p>
 		</div>
 		<div class="links">
 			<Button link="https://github.com/{github}" target="_blank">Github</Button>

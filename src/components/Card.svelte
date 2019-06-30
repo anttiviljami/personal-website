@@ -8,16 +8,18 @@
     max-width: 100%;
     width: 60rem;
     min-height: 25rem;
-    box-shadow: 0 0 2rem rgba(0,0,0,.2);
+    box-shadow: 0 0 2rem rgba(0,0,0,.4);
     background: white;
     margin: 2.5rem;
     overflow: hidden;
+    flex-basis: 1;
   }
   .image {
     width: 20rem;
     overflow: hidden;
     background-size: cover;
     flex-shrink: 0;
+    flex-basis: 1;
     background-position: top center;
   }
   .content {
