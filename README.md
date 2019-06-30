@@ -3,6 +3,20 @@
 
 My personal static home page. [https://anttiviljami.com](https://anttiviljami.com)
 
-- Built using [Svelte](https://github.com/sveltejs/component-template)
+- Built using [Svelte](https://svelte.dev/)
 - Hosted on AWS S3 + CloudFront, deployed with Terraform.
 
+## Develop
+
+```
+npm install
+npm run dev
+```
+
+## Deploy
+
+```
+terraform init
+terraform apply
+npm run deploy
+```
