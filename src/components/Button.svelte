@@ -23,10 +23,10 @@
     border-color: #8fd3d2;
     text-decoration: none;
   }
-  @media screen and (max-width: 28rem) {
+  @media screen and (max-width: 50rem) {
     .button {
-      width: 100%;
-      margin: 0 0 .5rem 0;
+      min-width: 100%;
+      padding: .5rem;
     }
   }
 </style>
