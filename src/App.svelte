@@ -14,12 +14,19 @@
 <style>
   .main-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+    flex-wrap: wrap;
+  }
+  .inner {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
   h1 {
     font-size: 3rem;
@@ -60,35 +67,43 @@
       display: flex;
       flex-wrap: wrap;
     }
+    .main-wrapper {
+      display: block;
+    }
+    .inner {
+      align-items: flex-start;
+    }
   }
 </style>
 
 <div class="main-wrapper">
+  <div class="inner">
   {#if !flipped}
-  <Card first image="./images/anttiviljami.jpg" onFlip={flip}>
-    <div class="intro">
-      <h1 class="heading">Viljami Kuosmanen</h1>
-      <p class="title">Developer, Consultant</p>
-      <p>Hi there! My name is Viljami and I'm a cloud native developer who solves business problems.</p>
-      <p>You might know me from one of my open source projects or heard me speaking about APIs and Developer Experience in your local meetup or tech conference.</p>
-      <p>Right now I work with AWS, Azure, Serverless, TypeScript, React, OpenAPI and GraphQL; but these are just tools I've picked up over the past 8 years working in consultancy and tech startups. I'm not particularly passionate about any single technology but rather I'm looking to build cool things with talented people.</p>
-      <p>How can I help you?</p>
-    </div>
-    <div class="links">
-      <Button link="https://github.com/{github}" target="_blank">Github</Button>
-      <Button link="https://twitter.com/{twitter}" target="_blank">Twitter</Button>
-      <Button link="https://linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
-      <Button link="mailto:{email}">Email</Button>
-    </div>
-  </Card>
-  {:else}
-  <Card onFlip={flip}>
-    <div class="morjesta">
-      <div>
-        <h1>Morjesta!</h1>
-        <p>("Hi" in Tampere-speak)</p>
+    <Card first image="./images/anttiviljami.jpg" onFlip={flip}>
+      <div class="intro">
+        <h1 class="heading">Viljami Kuosmanen</h1>
+        <p class="title">Developer, Consultant</p>
+        <p>Hi there! My name is Viljami and I'm a cloud native developer who solves business problems.</p>
+        <p>You might know me from one of my open source projects or heard me speaking about APIs and Developer Experience in your local meetup or tech conference.</p>
+        <p>Right now I work with AWS, Azure, Serverless, TypeScript, React, OpenAPI and GraphQL; but these are just tools I've picked up over the past 8 years working in consultancy and tech startups. I'm not particularly passionate about any single technology but rather I'm looking to build cool things with talented people.</p>
+        <p>How can I help you?</p>
       </div>
-    </div>
-  </Card>
+      <div class="links">
+        <Button link="https://github.com/{github}" target="_blank">Github</Button>
+        <Button link="https://twitter.com/{twitter}" target="_blank">Twitter</Button>
+        <Button link="https://linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
+        <Button link="mailto:{email}">Email</Button>
+      </div>
+    </Card>
+  {:else}
+    <Card onFlip={flip}>
+      <div class="morjesta">
+        <div>
+          <h1>Morjesta!</h1>
+          <p>("Hi" in Tampere-speak)</p>
+        </div>
+      </div>
+    </Card>
   {/if}
+  </div>
 </div>

@@ -8,15 +8,17 @@
 <style>
   .card {
     display: flex;
-    position: absolute;
+    position: relative;
     max-width: 90%;
     width: 60rem;
     min-height: 32rem;
     box-shadow: 0 0 2rem rgba(0,0,0,.4);
-    margin: 2rem 0;
     background: white;
     overflow: hidden;
     flex-basis: 1;
+  }
+  .card + .card {
+    position: absolute;
   }
   .image {
     width: 20rem;
@@ -35,7 +37,6 @@
   }
   @media screen and (max-width: 50rem) {
     .card {
-      top: 0;
       flex-wrap: wrap;
       width: 28rem;
     }        
@@ -74,7 +75,7 @@
   }
 </style>
 
-<div class="card {first ? 'first' : ''}" on:click in:fly={{y: 200, duration: 600, delay: 200 }} out:fly={{y: -100, duration: 600 }}>
+<div class="card {first ? 'first' : ''}" on:click in:fly={{ y: 200, duration: 600, delay: 200 }} out:fly={{y: -100, duration: 600 }}>
   {#if image}
   <div class="image" style="background-image:url({image})" />
   {/if}
