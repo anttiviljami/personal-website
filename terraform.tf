@@ -39,9 +39,17 @@ resource "aws_cloudfront_distribution" "static" {
   retain_on_delete = true
   is_ipv6_enabled = true
 
+  price_class = "PriceClass_100"
+
   origin {
-    domain_name = "${var.project_name}-static.s3.amazonaws.com"
+    domain_name = "${var.project_name}-static.s3-website-eu-west-1.amazonaws.com"
     origin_id = "${var.project_name}-static"
+    custom_origin_config {
+      http_port = "80"
+      https_port = "443"
+      origin_ssl_protocols = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+      origin_protocol_policy = "http-only"
+    }
   }
   default_root_object = "index.html"
 
@@ -76,6 +84,61 @@ resource "aws_cloudfront_distribution" "static" {
   }
 }
 
-output "Cloudfront Distribution URL" {
+output "Cloudfront Distribution URL 1" {
   value = "https://${aws_cloudfront_distribution.static.domain_name}"
+}
+
+resource "aws_cloudfront_distribution" "static_2" {
+  depends_on = ["aws_s3_bucket.static"]
+  enabled = true
+  retain_on_delete = true
+  is_ipv6_enabled = true
+
+  price_class = "PriceClass_100"
+
+  origin {
+    domain_name = "${var.project_name}-static.s3-website-eu-west-1.amazonaws.com"
+    origin_id = "${var.project_name}-static"
+    custom_origin_config {
+      http_port = "80"
+      https_port = "443"
+      origin_ssl_protocols = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+      origin_protocol_policy = "http-only"
+    }
+  }
+  default_root_object = "index.html"
+
+  aliases = ["avoinsorsa.fi", "www.avoinsorsa.fi"]
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+
+  viewer_certificate {
+    acm_certificate_arn = "arn:aws:acm:us-east-1:921809084865:certificate/b39683f9-e782-4e0b-8dda-fce1511b6be1"
+    ssl_support_method = "sni-only"
+  }
+
+  default_cache_behavior {
+    viewer_protocol_policy = "redirect-to-https"
+    allowed_methods = [ "GET", "HEAD", "OPTIONS" ]
+    cached_methods = [ "GET", "HEAD" ]
+    target_origin_id = "${var.project_name}-static"
+    forwarded_values {
+      query_string = true
+      cookies {
+        forward = "none"
+      }
+    }
+    compress = true
+    min_ttl = 0
+    default_ttl = 360
+    max_ttl = 86400
+  }
+}
+
+output "Cloudfront Distribution URL 2" {
+  value = "https://${aws_cloudfront_distribution.static_2.domain_name}"
 }
