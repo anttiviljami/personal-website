@@ -1,5 +1,5 @@
 # [anttiviljami.com](https://anttiviljami.com)
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/anttiviljami/openapi-backend/blob/master/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/anttiviljami/anttiviljami/blob/master/LICENSE)
 
 My personal static home page. [https://anttiviljami.com](https://anttiviljami.com)
 
