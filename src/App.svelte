@@ -31,7 +31,7 @@
     margin: 0;
     line-height: 1;
   }
-  h1,h2,h3,p {
+  h1,p {
     margin-bottom: 1rem;
   }
   * { line-height: 1.4 }

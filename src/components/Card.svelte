@@ -2,6 +2,7 @@
 	import { fade, fly } from 'svelte/transition';
   export let onFlip = undefined;
   export let image = undefined;
+  export let imageAlt = '';
   export let first = false;
 </script>
 
@@ -28,6 +29,12 @@
     flex-basis: 1;
     background-position: top center;
   }
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
   .content {
     flex-grow: 1;
     flex-basis: 1;
@@ -45,7 +52,7 @@
     }
     .image {
       flex-grow: 1;
-      min-height: 20rem;
+      max-height: 20rem;
     }
   }
   .flip {
@@ -77,7 +84,9 @@
 
 <div class="card {first ? 'first' : ''}" on:click in:fly={{ y: 200, duration: 600, delay: 200 }} out:fly={{y: -100, duration: 600 }}>
   {#if image}
-  <div class="image" style="background-image:url({image})" />
+  <div class="image" >
+    <img src={image} alt={imageAlt} />
+  </div>
   {/if}
   <div class="content">
     <slot></slot>
