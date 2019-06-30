@@ -16,8 +16,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-wrap: wrap;
   }
   .inner {
@@ -72,6 +70,7 @@
     }
     .inner {
       align-items: flex-start;
+      padding-bottom: 2rem;
     }
   }
 </style>
@@ -83,7 +82,7 @@
       <div class="intro">
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Developer, Consultant</p>
-        <p>Hi there! My name is Viljami and I'm a cloud native developer who solves business problems.</p>
+        <p>Hi there! My name is Viljami. I'm a cloud native developer who solves business problems.</p>
         <p>You might know me from one of my open source projects or heard me speaking about APIs and Developer Experience in your local meetup or tech conference.</p>
         <p>Right now I work with AWS, Azure, Serverless, TypeScript, React, OpenAPI and GraphQL; but these are just tools I've picked up over the past 8 years working in consultancy and tech startups. I'm not particularly passionate about any single technology but rather I'm looking to build cool things with talented people.</p>
         <p>How can I help you?</p>
