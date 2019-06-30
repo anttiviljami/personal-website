@@ -104,7 +104,7 @@
       <div class="intro">
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Senior Developer, Consultant</p>
-        <p>Hi there! My name is Viljami. I'm a cloud native developer who likes D&D and solves business problems.</p>
+        <p>Hi there! My name is Viljami. I'm a cloud native developer who loves board games and solves business problems.</p>
         <p>You might know me from one of my open source projects or perhaps heard me speaking about APIs and Developer Experience at your local meetup or tech conference.</p>
         <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 7 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
