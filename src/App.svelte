@@ -53,7 +53,7 @@
     text-align: center;
   }
   .morjesta h1 {
-    font-size: 4em;
+    font-size: 4.5em;
     letter-spacing: .25rem;
   }
   .pgp span {
@@ -61,11 +61,12 @@
     letter-spacing: .05rem;
   }
   @media screen and (max-width: 50rem) {
-    h1, .morjesta h1 {
+    h1 {
       font-size: 2rem;
     }
-    .pgp {
-      font-size: 12px;
+    .morjesta h1 {
+      font-size: 2.2rem;
+      letter-spacing: 0;
     }
     .pgp span:nth-child(5n)::after {
       content: "\A";
