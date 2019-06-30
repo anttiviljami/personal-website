@@ -1,16 +1,20 @@
 <script>
-  export let image;
+	import { fade, fly } from 'svelte/transition';
+  export let onFlip = undefined;
+  export let image = undefined;
+  export let first = false;
 </script>
 
 <style>
   .card {
     display: flex;
-    max-width: 100%;
+    position: absolute;
+    max-width: 90%;
     width: 60rem;
-    min-height: 25rem;
+    min-height: 32rem;
     box-shadow: 0 0 2rem rgba(0,0,0,.4);
+    margin: 2rem 0;
     background: white;
-    margin: 2.5rem;
     overflow: hidden;
     flex-basis: 1;
   }
@@ -31,22 +35,51 @@
   }
   @media screen and (max-width: 50rem) {
     .card {
+      top: 0;
       flex-wrap: wrap;
       width: 28rem;
-      margin: 1rem;
     }        
     .image, .content {
       width: 100%;
     }
     .image {
+      flex-grow: 1;
       min-height: 20rem;
     }
   }
+  .flip {
+    width: 4rem;
+    height: 4rem;
+    border-left: 1px solid rgba(0,0,0,.1);
+    position: absolute;
+    right: -2rem;
+    bottom: -2rem;
+    transform: rotate(45deg);
+    transform-origin: center;
+    cursor: pointer;
+  }
+  .first .flip {
+    animation-name: glow;
+    animation-duration: 10s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+  }
+  @keyframes glow {
+    0%   {background-color:rgba(143,211,210,0);border-color:rgba(0,0,0,.1)}
+    40%  {background-color:rgba(143,211,210,0);border-color:rgba(0,0,0,.1)}
+    45%  {background-color:rgba(143,211,210,1);border-color:rgba(0,0,0,0)}
+    50%  {background-color:rgba(143,211,210,0);border-color:rgba(0,0,0,.1)}
+    55%  {background-color:rgba(143,211,210,1);border-color:rgba(0,0,0,0)}
+    60% {background-color:rgba(143,211,210,0);border-color:rgba(0,0,0,.1)}
+  }
 </style>
 
-<div class="card">
+<div class="card {first ? 'first' : ''}" on:click in:fly={{y: 200, duration: 600, delay: 200 }} out:fly={{y: -100, duration: 600 }}>
+  {#if image}
   <div class="image" style="background-image:url({image})" />
+  {/if}
   <div class="content">
     <slot></slot>
+    <div class="flip" on:click={onFlip}></div>
   </div>
 </div>
