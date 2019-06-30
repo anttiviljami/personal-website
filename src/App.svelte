@@ -111,7 +111,7 @@
       <div class="morjesta">
         <div>
           <h1>@anttiviljami</h1>
-          <p class="pgp">
+          <p class="pgp" title="PGP Fingerprint">
             {#each fingerprint as hex}
             <span>{hex}</span>
             {/each}
