@@ -2,10 +2,12 @@
   import Card from './components/Card.svelte';
   import Button from './components/Button.svelte';
 
+  const email = 'viljami@avoinsorsa.fi';
   const github = 'anttiviljami';
   const twitter = 'anttiviljami';
   const linkedin = 'anttiviljami';
-  const email = 'viljami@avoinsorsa.fi';
+  const keybase = 'anttiviljami';
+  const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(' ');
 
   let flipped = false;
   const flip = () => flipped = !flipped;
@@ -54,12 +56,20 @@
     font-size: 4em;
     letter-spacing: .25rem;
   }
-  .morjesta p {
-    color: #ccc;
+  .pgp span {
+    margin: 0 .15rem;
+    letter-spacing: .05rem;
   }
   @media screen and (max-width: 50rem) {
     h1, .morjesta h1 {
       font-size: 2rem;
+    }
+    .pgp {
+      font-size: 12px;
+    }
+    .pgp span:nth-child(5n)::after {
+      content: "\A";
+      white-space: pre;
     }
     .links {
       display: flex;
@@ -88,18 +98,23 @@
         <p>How can I help you?</p>
       </div>
       <div class="links">
-        <Button link="https://github.com/{github}" target="_blank">Github</Button>
-        <Button link="https://twitter.com/{twitter}" target="_blank">Twitter</Button>
-        <Button link="https://linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
         <Button link="mailto:{email}">Email</Button>
+        <Button link="https://github.com/{github}" target="_blank">Github</Button>
+        <Button link="https://linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
+        <Button link="https://twitter.com/{twitter}" target="_blank">Twitter</Button>
+        <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
       </div>
     </Card>
   {:else}
     <Card onFlip={flip}>
       <div class="morjesta">
         <div>
-          <h1>Morjesta!</h1>
-          <p>("Hi" in Tampere-speak)</p>
+          <h1>@anttiviljami</h1>
+          <p class="pgp">
+            {#each fingerprint as hex}
+            <span>{hex}</span>
+            {/each}
+          </p>
         </div>
       </div>
     </Card>
