@@ -28,11 +28,11 @@
     if (window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
-      tiltY = -.010 * (centerX - event.clientX) / centerX;
-      tiltX = .025 * (centerY - event.clientY) / centerY;
+      tiltY = -.015 * (centerX - event.clientX) / centerX;
+      tiltX = .03 * (centerY - event.clientY) / centerY;
     } else {
-      tiltX = 0;
-      tiltY = 0;
+      tiltX = 0 + .0000001 * event.clientX;
+      tiltY = 0 + .0000001 * event.clientY;
     }
   }
 
@@ -47,6 +47,9 @@
     window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX + .0001}), 0);
     window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX - .0001}), 200);
     window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX}), 400);
+
+    const scroll = new SmoothScroll();
+    scroll.animateScroll(0);
   }
 </script>
 
