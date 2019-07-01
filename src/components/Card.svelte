@@ -4,6 +4,9 @@
   export let image = undefined;
   export let imageAlt = '';
   export let first = false;
+  export let tiltX = 0;
+  export let tiltY = 0;
+  const dist = (x, y) => Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 </script>
 
 <style>
@@ -13,7 +16,6 @@
     max-width: 90%;
     width: 60rem;
     min-height: 32rem;
-    box-shadow: 0 0 2rem rgba(0,0,0,.4);
     background: white;
     overflow: hidden;
     flex-basis: 1;
@@ -83,7 +85,12 @@
   }
 </style>
 
-<div class="card {first ? 'first' : ''}" on:click in:fly={{ y: 200, duration: 600, delay: 200 }} out:fly={{y: -100, duration: 600 }}>
+<div
+  class="card {first ? 'first' : ''}"
+  in:fly={{ y: 200, duration: 600, delay: 200 }}
+  out:fly={{y: -100, duration: 600 }}
+  style="transform: rotate3d({tiltX}, {tiltY}, 0, {dist(tiltX, tiltY)}turn); box-shadow: {-1000 * tiltY * dist(tiltX, tiltY)}rem {1000 * tiltX * dist(tiltX, tiltY)}rem 2rem rgba(0,0,0,.4);"
+  >
   {#if image}
   <div class="image" >
     <img src={image} alt={imageAlt} />

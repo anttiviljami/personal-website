@@ -22,6 +22,25 @@
 
   let flipped = false;
   const flip = () => flipped = !flipped;
+
+  let tiltX = 0;
+  let tiltY = 0;
+  function handleMousemove (event) {
+    if (window.innerWidth > 800) {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      tiltY = -.025 * (centerX - event.clientX) / centerX;
+      tiltX = .05 * (centerY - event.clientY) / centerY;
+    } else {
+      tiltX = 0;
+      tiltY = 0;
+    }
+  }
+
+  function handleMouseleave (event) {
+    tiltX = 0;
+    tiltY = 0;
+  }
 </script>
 
 <style>
@@ -97,10 +116,10 @@
   }
 </style>
 
-<div class="main-wrapper">
+<div class="main-wrapper" on:mousemove={handleMousemove} on:mouseleave={handleMouseleave}>
   <div class="inner">
   {#if !flipped}
-    <Card first image="./images/anttiviljami.jpg" onFlip={flip}>
+    <Card first image="./images/anttiviljami.jpg" onFlip={flip} tiltX={tiltX} tiltY={tiltY}>
       <div class="intro">
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Senior Developer, Consultant</p>
@@ -118,7 +137,7 @@
       </div>
     </Card>
   {:else}
-    <Card onFlip={flip}>
+    <Card onFlip={flip} tiltX={tiltX} tiltY={tiltY}>
       <div class="morjesta">
         <div>
           <h1>@anttiviljami</h1>
