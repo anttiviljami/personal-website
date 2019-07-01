@@ -6,7 +6,23 @@
   export let first = false;
   export let tiltX = 0;
   export let tiltY = 0;
-  const dist = (x, y) => Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+  let moves = 0;
+  const tiltEffect = (tiltX, tiltY) => { 
+    const dist = (x, y) => Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    let styles = [];
+    styles.push(`transform: rotate3d(${tiltX}, ${tiltY}, 0, ${dist(tiltX, tiltY)}turn)`);
+    styles.push(`box-shadow: ${-1000 * tiltY * dist(tiltX, tiltY)}rem ${1000 * tiltX * dist(tiltX, tiltY)}rem 2rem rgba(0,0,0,.4)`);
+    if (tiltX === 0 && tiltY === 0) {
+      moves = 0;
+    }
+    let inertia = .5 * (100 - moves) / 100;
+    if (inertia < 0) {
+      inertia = 0;
+    }
+    styles.push(`transition: box-shadow ${inertia}s linear, transform ${inertia}s linear`)
+    moves++;
+    return styles.join(';')
+  }
 </script>
 
 <style>
@@ -89,7 +105,7 @@
   class="card {first ? 'first' : ''}"
   in:fly={{ y: 200, duration: 600, delay: 200 }}
   out:fly={{y: -100, duration: 600 }}
-  style="transform: rotate3d({tiltX}, {tiltY}, 0, {dist(tiltX, tiltY)}turn); box-shadow: {-1000 * tiltY * dist(tiltX, tiltY)}rem {1000 * tiltX * dist(tiltX, tiltY)}rem 2rem rgba(0,0,0,.4);"
+  style={tiltEffect(tiltX, tiltY)}
   >
   {#if image}
   <div class="image" >
