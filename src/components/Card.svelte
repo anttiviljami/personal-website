@@ -26,6 +26,14 @@
 </script>
 
 <style>
+  .card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .card-container + .card-container {
+    position: absolute;
+  }
   .card {
     display: flex;
     position: relative;
@@ -35,9 +43,6 @@
     background: white;
     overflow: hidden;
     flex-basis: 1;
-  }
-  .card + .card {
-    position: absolute;
   }
   .image {
     width: 20rem;
@@ -102,18 +107,22 @@
 </style>
 
 <div
-  class="card {first ? 'first' : ''}"
+  class="card-container"
   in:fly={{ y: 200, duration: 600, delay: 200 }}
   out:fly={{y: -100, duration: 600 }}
-  style={tiltEffect(tiltX, tiltY)}
-  >
-  {#if image}
-  <div class="image" >
-    <img src={image} alt={imageAlt} />
-  </div>
-  {/if}
-  <div class="content">
-    <slot></slot>
-    <div class="flip" on:click={onFlip}></div>
+>
+  <div
+    class="card {first ? 'first' : ''}"
+    style={tiltEffect(tiltX, tiltY)}
+    >
+    {#if image}
+    <div class="image" >
+      <img src={image} alt={imageAlt} />
+    </div>
+    {/if}
+    <div class="content">
+      <slot></slot>
+      <div class="flip" on:click={onFlip}></div>
+    </div>
   </div>
 </div>

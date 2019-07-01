@@ -21,11 +21,10 @@
   ];
 
   let flipped = false;
-  const flip = () => flipped = !flipped;
-
   let tiltX = 0;
   let tiltY = 0;
-  function handleMousemove (event) {
+
+  const handleMousemove = (event) => {
     if (window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
@@ -37,9 +36,17 @@
     }
   }
 
-  function handleMouseleave (event) {
+  const handleMouseleave = (event) => {
     tiltX = 0;
     tiltY = 0;
+  }
+
+  const flip = (event) => {
+    flipped = !flipped;
+    // safari fix for weird absolute positioning during transition
+    window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX + .0001}), 0);
+    window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX - .0001}), 200);
+    window.setTimeout(() => handleMousemove({clientY: event.clientY, clientX: event.clientX}), 400);
   }
 </script>
 
