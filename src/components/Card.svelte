@@ -15,11 +15,11 @@
     if (tiltX === 0 && tiltY === 0) {
       moves = 0;
     }
-    let inertia = .5 * (100 - moves) / 100;
+    let inertia = .5 * (35 - moves) / 100;
     if (inertia < 0) {
       inertia = 0;
     }
-    styles.push(`transition: box-shadow ${inertia}s linear, transform ${inertia}s linear`)
+    styles.push(`transition: box-shadow ${inertia}s linear, transform ${inertia}s linear;`)
     moves++;
     return styles.join(';')
   }

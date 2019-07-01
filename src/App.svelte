@@ -28,8 +28,8 @@
     if (window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
-      tiltY = -.025 * (centerX - event.clientX) / centerX;
-      tiltX = .05 * (centerY - event.clientY) / centerY;
+      tiltY = -.010 * (centerX - event.clientX) / centerX;
+      tiltX = .025 * (centerY - event.clientY) / centerY;
     } else {
       tiltX = 0;
       tiltY = 0;
