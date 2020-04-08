@@ -28,7 +28,11 @@
   let tiltY = 0;
 
   const handleMousemove = (event) => {
-    if (flipped && window.innerWidth > 800) {
+    if (!flipped) {
+      return tiltX = 0;
+      return tiltY = 0;
+    }
+    if (window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
       tiltY = -.025 * (centerX - event.clientX) / centerX;
@@ -82,6 +86,23 @@
   * { line-height: 1.4 }
   .intro {
     flex-grow: 1;
+  }
+  ul.icons {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    padding: 0;
+  }
+  ul.icons li {
+    line-height: 1.5;
+    margin-right: 1rem;
+  }
+  ul.icons img {
+    max-width: 25px;
+    filter: opacity(.66);
+  }
+  ul.icons a:hover img {
+    filter: opacity(1);
   }
   p.title {
     letter-spacing: .25rem;
@@ -140,13 +161,16 @@
         <p>Right now I'm working with <i>{tools.join(', ')}</i>, to name a few of my favourites. But these are just tools I've picked up over years of working in teams building tech startups and consulting some of Europe's largest enterprises.</p>
         <p>I'm not particularly passionate about any single technology but rather looking to make an impact by building cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
-        <p><a href="mailto:{email}">{email}</a></p>
+        <ul class="icons">
+          <li><a href="https://github.com/{github}" title="github.com/{github}" target="_blank"><img src="https://img.icons8.com/material-sharp/96/000000/github.png" alt="GitHub"/></a></li>
+          <li><a href="https://twitter.com/{twitter}" title="twitter.com/{twitter}" target="_blank"><img src="https://img.icons8.com/android/96/000000/twitter.png" alt="Twitter"/></a></li>
+          <li><a href="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank"><img src="https://img.icons8.com/metro/104/000000/linkedin.png" alt="LinkedIn"/></a></li>
+          <li><a href="mailto:{email}">{email}</a></li>
+        </ul>
       </div>
       <div class="links">
-        <Button link="https://github.com/{github}" title="github.com/{github}" target="_blank">Github</Button>
-        <Button link="https://twitter.com/{twitter}" title="twitter.com/{twitter}" target="_blank">Twitter</Button>
-        <Button link="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
         <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
+        <Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>
         <Button link="https://calendly.com/{calendly}" title="calendly.com/{calendly}" target="_blank">Schedule a Meeting</Button>
       </div>
     </Card>
