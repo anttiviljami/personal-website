@@ -7,6 +7,7 @@
   const twitter = 'anttiviljami';
   const linkedin = 'anttiviljami';
   const keybase = 'anttiviljami';
+  const calendly = 'viljami';
   const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(' ');
 
   const tools = [
@@ -145,7 +146,8 @@
         <Button link="https://github.com/{github}" title="github.com/{github}" target="_blank">Github</Button>
         <Button link="https://twitter.com/{twitter}" title="twitter.com/{twitter}" target="_blank">Twitter</Button>
         <Button link="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
-        <Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>
+        <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
+        <Button link="https://calendly.com/{calendly}" title="calendly.com/{calendly}" target="_blank">Schedule a Meeting</Button>
       </div>
     </Card>
   {:else}
