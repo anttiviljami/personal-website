@@ -2,7 +2,7 @@
   import Card from './components/Card.svelte';
   import Button from './components/Button.svelte';
 
-  const email = 'viljami@avoinsorsa.fi';
+  const email = 'viljami@viljami.io';
   const github = 'anttiviljami';
   const twitter = 'anttiviljami';
   const linkedin = 'anttiviljami';
@@ -13,8 +13,8 @@
     'AWS',
     'Azure',
     'Serverless',
-    'Docker',
     'TypeScript',
+    'Python',
     'React',
     'GraphQL',
     'OpenAPI',
@@ -25,7 +25,7 @@
   let tiltY = 0;
 
   const handleMousemove = (event) => {
-    if (window.innerWidth > 800) {
+    /*if (window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
       tiltY = -.015 * (centerX - event.clientX) / centerX;
@@ -33,7 +33,7 @@
     } else {
       tiltX = 0 + .0000001 * event.clientX;
       tiltY = 0 + .0000001 * event.clientY;
-    }
+    }*/
   }
 
   const handleMouseleave = (event) => {
@@ -132,18 +132,18 @@
     <Card first image="./images/anttiviljami.jpg" onFlip={flip} tiltX={tiltX} tiltY={tiltY}>
       <div class="intro">
         <h1 class="heading">Viljami Kuosmanen</h1>
-        <p class="title">Senior Developer, Consultant</p>
-        <p>Hi there! My name is Viljami. I'm a cloud native developer who loves board games and solves business problems.</p>
-        <p>You might know me from one of my open source projects or perhaps heard me speaking about APIs and Developer Experience at your local meetup or tech conference.</p>
+        <p class="title">Senior Developer</p>
+        <p>Hi there! I'm a cloud native developer currently located in Munich, Germany.</p>
+        <p>You might know me from one of my open source projects or perhaps heard me talk about APIs and Developer Experience at your local meetup or tech conference.</p>
         <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 7 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
+        <p><a href="mailto:{email}">{email}</a></p>
       </div>
       <div class="links">
-        <Button link="mailto:{email}" title={email}>Email</Button>
         <Button link="https://github.com/{github}" title="github.com/{github}" target="_blank">Github</Button>
-        <Button link="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
         <Button link="https://twitter.com/{twitter}" title="twitter.com/{twitter}" target="_blank">Twitter</Button>
-        <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
+        <Button link="https://linkedin.com/in/{linkedin}" title="linkedin.com/in/{linkedin}" target="_blank">LinkedIn</Button>
+        <Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>
       </div>
     </Card>
   {:else}
