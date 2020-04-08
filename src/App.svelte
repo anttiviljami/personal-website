@@ -25,15 +25,15 @@
   let tiltY = 0;
 
   const handleMousemove = (event) => {
-    /*if (window.innerWidth > 800) {
+    if (flipped && window.innerWidth > 800) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
-      tiltY = -.015 * (centerX - event.clientX) / centerX;
-      tiltX = .03 * (centerY - event.clientY) / centerY;
+      tiltY = -.025 * (centerX - event.clientX) / centerX;
+      tiltX = .05 * (centerY - event.clientY) / centerY;
     } else {
       tiltX = 0 + .0000001 * event.clientX;
       tiltY = 0 + .0000001 * event.clientY;
-    }*/
+    }
   }
 
   const handleMouseleave = (event) => {
@@ -135,7 +135,7 @@
         <p class="title">Senior Developer</p>
         <p>Hi there! I'm a cloud native developer currently located in Munich, Germany.</p>
         <p>You might know me from one of my open source projects or perhaps heard me talk about APIs and Developer Experience at your local meetup or tech conference.</p>
-        <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 7 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
+        <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 8 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
         <p><a href="mailto:{email}">{email}</a></p>
       </div>
