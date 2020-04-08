@@ -10,9 +10,11 @@
   const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(' ');
 
   const tools = [
+    'Linux',
     'AWS',
     'Azure',
     'Serverless',
+    'Kubernetes',
     'TypeScript',
     'Python',
     'React',
@@ -133,9 +135,9 @@
       <div class="intro">
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Senior Developer</p>
-        <p>Hi there! I'm a cloud native developer currently located in Munich, Germany.</p>
-        <p>You might know me from one of my open source projects or perhaps heard me talk about APIs and Developer Experience at your local meetup or tech conference.</p>
-        <p>Right now I'm working with {tools.join(', ')} and many others. But these are just tools I've picked up over the past 8 years working in tech consultancy and startups. I'm not particularly passionate about any single technology but rather looking to build cool things with talented people.</p>
+        <p>Hi there! I'm a cloud native developer with 8+ years of experience currently located in Munich, Germany.</p>
+        <p>Right now I'm working with <i>{tools.join(', ')}</i>, to name a few of my favourites. But these are just tools I've picked up over years of working in teams building tech startups and consulting some of Europe's largest enterprises.</p>
+        <p>I'm not particularly passionate about any single technology but rather looking to make an impact by building cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
         <p><a href="mailto:{email}">{email}</a></p>
       </div>
