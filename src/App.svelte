@@ -159,7 +159,7 @@
         <h1 class="heading">Viljami Kuosmanen</h1>
         <p class="title">Senior Developer</p>
         <p>Hi there! I'm a cloud native developer with 8+ years of experience currently located in Munich, Germany.</p>
-        <p>Right now I'm working with <i>{tools.join(', ')}</i>, to name a few of my favourites. But these are just tools I've picked up over years of working in teams building tech startups and consulting some of Europe's largest enterprises.</p>
+        <p>Right now I'm working with <i>{tools.join(', ')}</i> to name a few of my favourites. But these are just tools I've picked up over years of working in teams building tech startups and consulting some of Europe's largest enterprises.</p>
         <p>I'm not particularly passionate about any single technology but rather looking to make an impact by building cool things with talented people.</p>
         <p>But enough about me. How can I help you?</p>
         <ul class="icons">
