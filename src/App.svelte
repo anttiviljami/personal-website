@@ -7,6 +7,7 @@
   const twitter = 'anttiviljami';
   const linkedin = 'anttiviljami';
   const keybase = 'anttiviljami';
+  const buymeacoffee = 'anttiviljami';
   const calendly = 'viljami';
   const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(' ');
 
@@ -170,8 +171,9 @@
       </div>
       <div class="links">
         <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
-        <Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>
+        <!--<Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>-->
         <Button link="https://calendly.com/{calendly}" title="calendly.com/{calendly}" target="_blank">Schedule a Meeting</Button>
+        <Button link="https://buymeacoff.ee/{buymeacoffee}" title="buymeacoff.ee/{buymeacoffee}" target="_blank">Buy me a Coffee</Button>
       </div>
     </Card>
   {:else}
