@@ -1,4 +1,5 @@
 # [anttiviljami.com](https://anttiviljami.com)
+![CI](https://github.com/anttiviljami/personal-website/workflows/CI/badge.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/anttiviljami/anttiviljami/blob/master/LICENSE)
 
 My personal static home page. [https://anttiviljami.com](https://anttiviljami.com)
