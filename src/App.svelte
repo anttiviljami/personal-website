@@ -9,7 +9,7 @@
   const keybase = 'anttiviljami';
   const buymeacoffee = 'anttiviljami';
   const calendly = 'viljami';
-  const fingerprint = '40EA BFC7 ECA2 71E4 EECB 4AC4 1834 53EB 5722 2BE7'.split(
+  const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8'.split(
     ' ',
   );
 
