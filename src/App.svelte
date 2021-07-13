@@ -188,7 +188,7 @@
           <h1 class="heading">Viljami Kuosmanen</h1>
           <p class="title">Cloud Engineer</p>
           <p>
-            Hi there! I'm a cloud native developer with 10 years of experience, currently Head of Engineering at <a href="https://epilot.cloud/en" target="_blank">epilot</a> in beautiful Cologne, Germany.
+            Hi there! I'm a cloud native developer with 10 years of experience, currently Head of Engineering at <a href="https://epilot.cloud/en" target="_blank">epilot.cloud</a> in beautiful Cologne, Germany.
           </p>
           <p>
             Right now I'm building products with
@@ -198,16 +198,13 @@
             consulting for some of Europe's largest enterprises.
           </p>
           <p>
-            I'm not particularly passionate about any single tool or technology
-            but rather looking to make an impact by building cool things with
-            ambitious people.
+            I'm not partial to any single tool or technology but always looking to work with ambitious, fun people who want to make an impact by building great products and contributing to <a href="https://github.com/{github}" target="_blank">Open Source software</a>.
           </p>
           <p>But enough about me. How can I help you?</p>
           <ul class="icons">
             <li>
               <a
                 href="https://github.com/{github}"
-                title="github.com/{github}"
                 target="_blank">
                 <img
                   src="https://img.icons8.com/material-sharp/96/000000/github.png"
@@ -217,7 +214,6 @@
             <li>
               <a
                 href="https://twitter.com/{twitter}"
-                title="twitter.com/{twitter}"
                 target="_blank">
                 <img
                   src="https://img.icons8.com/android/96/000000/twitter.png"
@@ -227,7 +223,6 @@
             <li>
               <a
                 href="https://linkedin.com/in/{linkedin}"
-                title="linkedin.com/in/{linkedin}"
                 target="_blank">
                 <img
                   src="https://img.icons8.com/metro/104/000000/linkedin.png"
@@ -244,13 +239,11 @@
           <!--<Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>-->
           <Button
             link="https://calendly.com/{calendly}"
-            title="calendly.com/{calendly}"
             target="_blank">
             Schedule a Meeting
           </Button>
           <Button
             link="https://buymeacoff.ee/{buymeacoffee}"
-            title="buymeacoff.ee/{buymeacoffee}"
             target="_blank">
             Buy me a Coffee
           </Button>
