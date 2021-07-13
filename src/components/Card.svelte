@@ -70,13 +70,15 @@
       flex-wrap: wrap;
       width: 28rem;
       min-height: 18rem;
+      justify-content: center;
     }        
-    .image, .content {
+    .content {
       width: 100%;
     }
     .image {
-      flex-grow: 1;
-      max-height: 20rem;
+      margin-top: 2rem;
+      width: 10rem;
+      height: 12rem;
     }
   }
   .flip {
