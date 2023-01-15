@@ -9,9 +9,7 @@
   const keybase = 'anttiviljami';
   const buymeacoffee = 'anttiviljami';
   const calendly = 'viljami';
-  const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8'.split(
-    ' ',
-  );
+  const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8'
 
   const tools = [
     'AWS',
@@ -142,6 +140,9 @@
     font-size: 4.5em;
     letter-spacing: 0.25rem;
   }
+  .pgp a {
+    color: #111;
+  }
   .pgp span {
     margin: 0 0.15rem;
     letter-spacing: 0.05rem;
@@ -254,10 +255,11 @@
         <div class="morjesta">
           <div>
             <h1>@anttiviljami</h1>
+
             <p class="pgp" title="PGP Fingerprint">
-              {#each fingerprint as hex}
-                <span>{hex}</span>
-              {/each}
+              <a href="https://keybase.io/{keybase}" target="_blank">
+                <span>{fingerprint}</span>
+              </a>
             </p>
           </div>
         </div>
