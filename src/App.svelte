@@ -187,7 +187,7 @@
         {tiltY}>
         <div class="intro">
           <h1 class="heading">Viljami Kuosmanen</h1>
-          <p class="title">Cloud Engineer</p>
+          <p class="title">Product Engineer</p>
           <p>
             Hi there! I'm a cloud native developer with 10 years of experience, currently Head of Engineering at <a href="https://epilot.cloud/en" target="_blank">epilot.cloud</a> in beautiful Cologne, Germany.
           </p>
