@@ -9,18 +9,18 @@
   const keybase = 'anttiviljami';
   const buymeacoffee = 'anttiviljami';
   const calendly = 'viljami';
-  const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8'
+  const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8';
 
   const tools = [
-    'AWS',
-    'Serverless',
-    'CDK',
-    'OpenAPI',
-    'GraphQL',
     'TypeScript',
     'Python',
-    'React',
+    'AWS',
+    'Serverless',
+    'OpenAPI',
+    'tRPC',
     'Svelte',
+    'React',
+    'Elasticsearch',
   ];
 
   let flipped = false;
@@ -84,6 +84,7 @@
     height: 100%;
     flex-wrap: wrap;
   }
+
   .inner {
     margin: 2rem 0;
     display: flex;
@@ -124,10 +125,15 @@
   ul.icons a:hover img {
     filter: opacity(1);
   }
+  h1.heading {
+    letter-spacing: 0.1rem;
+  }
+
   p.title {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
   }
+
   .morjesta {
     display: flex;
     justify-content: center;
@@ -189,45 +195,49 @@
           <h1 class="heading">Viljami Kuosmanen</h1>
           <p class="title">Product Engineer</p>
           <p>
-            Hi there! I'm a cloud native developer with 10 years of experience, currently Head of Engineering at <a href="https://epilot.cloud/en" target="_blank">epilot.cloud</a> in beautiful Cologne, Germany.
+            I'm a software engineer with 15+ years of experience, Head of
+            Engineering at
+            <a href="https://epilot.cloud/en" target="_blank">epilot.cloud</a>
+            and Open Source maintainer of
+            <a href="https://openapistack.co" target="_blank">
+              openapistack.co
+            </a>
           </p>
           <p>
-            Right now I'm building products with
+            Most recently I'm building with
             <i>{tools.join(', ')}</i>
-            to name a few of my favourites – Tools I've picked
-            up over years working in teams building tech products and
-            consulting for some of Europe's largest enterprises.
+            to name a few of my favourites – Tools I've picked up over years
+            building software, mostly on the web.
           </p>
           <p>
-            I'm not partial to any single tool or technology but always looking to work with ambitious, fun people who want to make an impact by building great products and contributing to <a href="https://github.com/{github}" target="_blank">Open Source software</a>.
+            I consider myself a
+            <a href="https://productengineer.org" target="_blank">
+              product engineer,
+            </a>
+            not partial to any single tool or technology but always looking to
+            work with ambitious, fun people to build great products together.
           </p>
           <p>But enough about me. How can I help you?</p>
           <ul class="icons">
             <li>
-              <a
-                href="https://github.com/{github}"
-                target="_blank">
+              <a href="https://github.com/{github}" target="_blank">
                 <img
                   src="https://img.icons8.com/material-sharp/96/000000/github.png"
                   alt="GitHub" />
               </a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/{twitter}"
-                target="_blank">
+              <a href="https://linkedin.com/in/{linkedin}" target="_blank">
                 <img
-                  src="https://img.icons8.com/android/96/000000/twitter.png"
-                  alt="Twitter" />
+                  src="https://img.icons8.com/?size=64&id=8808&format=png"
+                  alt="LinkedIn" />
               </a>
             </li>
             <li>
-              <a
-                href="https://linkedin.com/in/{linkedin}"
-                target="_blank">
+              <a href="https://twitter.com/{twitter}" target="_blank">
                 <img
-                  src="https://img.icons8.com/metro/104/000000/linkedin.png"
-                  alt="LinkedIn" />
+                  src="https://img.icons8.com/?size=64&id=phOKFKYpe00C&format=png"
+                  alt="Twitter" />
               </a>
             </li>
             <li>
@@ -238,16 +248,13 @@
         <div class="links">
           <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
           <!--<Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>-->
-          <Button
-            link="https://calendly.com/{calendly}"
-            target="_blank">
+          <Button link="/portfolio.pdf" target="_blank">View Portfolio</Button>
+          <Button link="https://calendly.com/{calendly}" target="_blank">
             Schedule a Meeting
           </Button>
-          <Button
-            link="https://buymeacoff.ee/{buymeacoffee}"
-            target="_blank">
+          <!--<Button link="https://buymeacoff.ee/{buymeacoffee}" target="_blank">
             Buy me a Coffee
-          </Button>
+          </Button>-->
         </div>
       </Card>
     {:else}
