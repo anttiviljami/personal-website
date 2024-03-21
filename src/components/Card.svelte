@@ -53,7 +53,7 @@
     flex-basis: 1;
   }
   .image {
-    width: 20rem;
+    width: 19rem;
     overflow: hidden;
     background-size: cover;
     flex-shrink: 0;
