@@ -234,13 +234,6 @@
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/{twitter}" target="_blank">
-                <img
-                  src="https://img.icons8.com/?size=64&id=phOKFKYpe00C&format=png"
-                  alt="Twitter" />
-              </a>
-            </li>
-            <li>
               <a href="mailto:{email}">{email}</a>
             </li>
           </ul>
