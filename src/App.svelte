@@ -241,7 +241,8 @@
         <div class="links">
           <!--<Button link="https://keybase.io/{keybase}" target="_blank">Keybase</Button>-->
           <!--<Button link="mailto:{email}" title="Email" target="_blank">Email me</Button>-->
-          <Button link="/portfolio.pdf" target="_blank">View Portfolio</Button>
+          <Button link="/resume.pdf" target="_blank">View Resume</Button>
+          <!--<Button link="/portfolio.pdf" target="_blank">View Portfolio</Button>-->
           <Button link="https://calendly.com/{calendly}" target="_blank">
             Schedule a Meeting
           </Button>
