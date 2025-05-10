@@ -12,10 +12,10 @@
   const fingerprint = '14F9 2B1C 77B2 84FA 99FB 33E0 BAD3 0743 AD50 F3C8';
 
   const tools = [
-    'TypeScript',
-    'Python',
     'AWS',
-    'Serverless',
+    'SST',
+    'Python',
+    'TypeScript',
     'OpenAPI',
     'tRPC',
     'Svelte',
@@ -196,9 +196,8 @@
           <p class="title">Product Engineer</p>
           <p>
             I'm a software engineer with 15+ years of experience, Head of
-            Engineering at
-            <a href="https://epilot.cloud/en" target="_blank">epilot.cloud</a>
-            and Open Source maintainer of
+            Engineering at epilot.cloud (<a target="_blank" href="https://www.epilot.cloud/en/company/careers">we're hiring remote!</a>)
+            and OSS maintainer of
             <a href="https://openapistack.co" target="_blank">
               openapistack.co
             </a>
@@ -210,11 +209,10 @@
             building software, mostly on the web.
           </p>
           <p>
-            I consider myself a
+            As the author of 
             <a href="https://productengineer.org" target="_blank">
-              product engineer,
-            </a>
-            not partial to any single tool or technology but always looking to
+              productengineer.org
+            </a> I'm not partial to any single tool or technology but rather always looking to
             work with ambitious, fun people to build great products together.
           </p>
           <p>But enough about me. How can I help you?</p>
